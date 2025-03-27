@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Cabin - Forest Study Room</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 用于 FAQ 展开收起的样式 */
+       .faq-question {
+            cursor: pointer;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+       .faq-answer {
+            display: none;
+            margin-bottom: 15px;
+        }
+
+       .toggle-icon {
+            display: inline-block;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About the Study Room</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#spaces">Study Spaces</a></li>
+                <li><a href="detail.html#spaces">Details</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="space-detail">
+        <div class="container">
+            <h2 style="margin-top: 5px;">INTRODUCTION</h2>
+            <div style="text-align: center;">
+                <img src="images/1706501251741-bg1.jpg" alt="Private Cabin">
+            </div>
+            <p>The private cabin at our Forest Study Room provides a completely secluded and distraction - free learning environment. Each cabin is thoughtfully designed with your comfort and productivity in mind. With comfortable seating, a spacious desk, and optimal lighting, you can focus on your studies without any interruptions.</p>
+            <p>We also offer high - speed Wi - Fi and multiple charging ports to keep your devices powered up throughout your study session. The superior soundproofing ensures that you can enjoy a quiet and peaceful learning experience.</p>
+            <h3>Facilities</h3>
+            <ul>
+                <li>Ergonomic chairs and a large, sturdy desk</li>
+                <li>Energy - efficient LED lighting</li>
+                <li>High - speed fiber - optic Wi - Fi</li>
+                <li>Multiple USB and power outlets</li>
+                <li>Soundproof walls and acoustic ceiling tiles</li>
+            </ul>
+            <h3>Frequently Asked Questions</h3>
+            <div class="faq">
+                <div class="faq-item">
+                    <span class="faq-question">Can I bring my own food and drinks? <span class="toggle-icon">+</span></span>
+                    <p class="faq-answer">Yes, you can bring non - messy snacks and sealed drinks. However, please keep the cabin clean.</p>
+                </div>
+                <div class="faq-item">
+                    <span class="faq-question">Is there a security deposit? <span class="toggle-icon">+</span></span>
+                    <p class="faq-answer">Yes, a $50 security deposit is required for monthly rentals. It will be refunded upon the successful completion of your rental period.</p>
+                </div>
+            </div>
+            <a href="index.html#contact" class="btn">Book Now</a>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Forest Study Room. All rights reserved.</p>
+    </footer>
+    <script>
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', function () {
+                const answer = this.nextElementSibling;
+                const toggleIcon = this.querySelector('.toggle-icon');
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                    toggleIcon.textContent = '+';
+                } else {
+                    answer.style.display = 'block';
+                    toggleIcon.textContent = '-';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>    
